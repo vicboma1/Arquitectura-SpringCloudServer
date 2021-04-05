@@ -4,6 +4,7 @@ Arrancar jar
 ``` 
 mvn run 
 ```
+
 Web
 ````
 http://localhost:8888/actuator/
@@ -27,6 +28,7 @@ http://localhost:8888/actuator/
   }
 }
 ````
+
 Web
 ```
 http://localhost:8888/actuator/health
@@ -34,7 +36,10 @@ http://localhost:8888/actuator/health
 {"status":"UP"}
 ```
 
-Visitar via web JSON con el fichero application.properties de nuestro repo centralizado
+Web
 ```
 http://localhost:8888/application/default
+
+{"name":"application" , profiles:["default"], "label":null, "version":"...", "state":null, "propertySources":[{"name":"https://github.com/vicboma1/Arquitectura-SpringCloudConfig", "source":{"application.version":"1.0.0.0-SNAPSHOT",
+"application.api.version":"api/v1/"}}]}
 ```
